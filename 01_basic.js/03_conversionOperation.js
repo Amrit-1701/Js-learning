@@ -32,3 +32,11 @@ null-null
 undefine-undefine
 num-str
 */
+
+// let a = 70;
+// console.log(a++); // outputs 70, the old value of a, but a will be 71 afterwards
+// console.log(a)    // outputs 71; no matter how you increment, after the increment, the value has changed
+
+let a = 77;
+console.log(++a); // outputs 70, the old value of a, but a will be 71 afterwards
+console.log(a)    // outputs 71; no matter how you increment, after the increment, the value has changed
