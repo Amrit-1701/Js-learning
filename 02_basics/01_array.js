@@ -35,3 +35,4 @@ console.log(myn1);
 
 console.log('B',myArr1)
 //console.log(myn2);
+
