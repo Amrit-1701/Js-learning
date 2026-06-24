@@ -22,6 +22,16 @@ function loginUserMess(username) {
     }
     return `${username} just logged in`
 }
-console.log(loginUserMess('amrit'))
+//console.log(loginUserMess('amrit'))
 
 
+function calcCartPrice(...num1) { //rest operator
+    return num1
+}
+
+// function calcCartPrice(val1,val2, ...num1) {
+//     return num1
+//   //o/p [ 500, 230 ] bcz val1 and val2 takke first two element so it only shows the left one
+// }
+
+console.log(calcCartPrice(100,200,500,230));

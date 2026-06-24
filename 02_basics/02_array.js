@@ -6,7 +6,7 @@ const dc = ['superman', 'flash', 'bat']
 
 // const allHero = marvelHero.concat(dc)
 
-const allHero = [...marvelHero, ...dc]
+const allHero = [...marvelHero, ...dc] //spread operator
 // console.log(allHero);//solve push prblm
 
 const mergeArr = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]] //how to solve this

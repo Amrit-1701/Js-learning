@@ -25,7 +25,7 @@ const obj2 = { 3: 'a', 4: 'b' }
 //const obj3 = { obj1, obj2 }
 //const obj3 = Object.assign({}, obj1, obj2)//{}this is target ans other are source first one is targett
 
-const obj3={...obj1, ...obj2}
+const obj3={...obj1, ...obj2} //spread operator
 //console.log(obj3);
 
 //console.log(typeof Object.keys(obj1)); //o/p in arrays
