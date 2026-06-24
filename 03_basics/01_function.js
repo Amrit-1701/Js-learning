@@ -34,4 +34,38 @@ function calcCartPrice(...num1) { //rest operator
 //   //o/p [ 500, 230 ] bcz val1 and val2 takke first two element so it only shows the left one
 // }
 
-console.log(calcCartPrice(100,200,500,230));
+//console.log(calcCartPrice(100,200,500,230));
+
+const user={
+    username:'amrit',
+    price:149
+}
+
+
+//console.log(user.hasOwnProperty('username'));
+//console.log(user.hasOwnProperty('price'));
+
+function handleObj(anyObj){
+    console.log(`name is ${anyObj.username} and price of course is ${anyObj.price}`);
+    
+}
+
+//handleObj(user)
+     //this create error if in obj instead of price the codr uses prices so it returns undefined s we use the check code first
+
+// handleObj({
+//     username:"amrit",
+//     price:"399"
+// })
+
+const myNewArr=[200,100,400,500]
+
+function returnArrEl(getArr){
+    return getArr[1]
+}
+// console.log(returnArrEl(myNewArr));
+console.log(returnArrEl([100,200,400,500]));
+
+
+
+
