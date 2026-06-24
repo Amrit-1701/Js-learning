@@ -1,11 +1,27 @@
-function sayMyName(){
+function sayMyName() {
     console.log("a");
     console.log("m");
-   
+
 }
 //sayMyName()
 
-function addnum(num1,num2){
-    console.log(`adittion result is ${num1+num2}`)
+function addnum(num1, num2) { //parameter the required one or while defining func
+    //console.log(`adittion result is ${num1+num2}`)
+    let result = num1 + num2
+    return result //after return nothing happen in func
 }
-addnum(78,56)
+
+//if we use log in funtion the val is not storing in the esult file bt when we use return in function it solve the prblm
+const result = addnum(78, 56) //argument the provided data during func call
+//console.log(result);
+
+function loginUserMess(username) {
+    if (username === undefined) {
+        console.log("plz enter username");
+        return
+    }
+    return `${username} just logged in`
+}
+console.log(loginUserMess('amrit'))
+
+
