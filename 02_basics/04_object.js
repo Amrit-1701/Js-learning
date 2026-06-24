@@ -44,3 +44,13 @@ const course={
 
 const{teacher:instructor}=course //(destructure) we can use teacher as diff word a
 console.log(instructor);
+
+//Json API
+
+// {
+//     'name':"amrit",
+//     'coursename':'js course',
+//     'price':'free'
+// }
+
+
