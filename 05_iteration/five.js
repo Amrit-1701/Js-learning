@@ -25,6 +25,7 @@ coding.forEach((item, index, arr) => {
     // console.log(item,index,arr);
 })
 
+
 const myCoding = [
     {
         langName: 'javascript',
