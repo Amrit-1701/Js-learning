@@ -24,7 +24,7 @@ const user = {
 // }
 // chai()
 
-// +++++++ARROW++++++++
+// +++++++++++ ARROW +++++++++++
 const chai = () => {
     let name = 'amrit'
     console.log(this.name); //undefined
