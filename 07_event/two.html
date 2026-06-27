@@ -1,3 +1,6 @@
+    <!-- //if we use sayAm() function then it will be 
+    //executed but if we use sayAm this will only give reference -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +24,13 @@
 
     // console.log('Hello World3')
 
+   const changeH1=function(){
+       document.querySelector('h1').innerHTML="Best js course"}
+   const changeMe = setTimeout(say ,2000) ;
 
-    //if we use sayAm() function then it will be 
-    //executed but if we use sayAm this will only give reference
+   document.getElementById('stop').addEventListener('click', function(){
+       clearTimeout(changeMe) ;
+       console.log('Timeout cleared')
+   });
 
 </script>
