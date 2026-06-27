@@ -20,13 +20,14 @@
 </html>
 
 <script>
-     // document.getElementById('owl').onclick = function(){
+    // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
 
      // attachEvent()
     // jQuery - on
 
+    //++++++++++ for e ++++++++++++
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
@@ -34,17 +35,18 @@
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
-    // }, false)
+    // }, false) //true is capturing mode so if we print this and next 
+    //          //first one is print first but in false it opp
 
-     // document.getElementById('owl').addEventListener('click', function(e){
+    //  document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     // e.stopPropagation() //stop bubbling or it did not allow to print the image print codde (up) one
     // }, false)
     
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log("google clicked");
-    // }, false)
+    document.getElementById('google').addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation()
+        console.log("google clicked");
+    }, false)
 
 </script>
