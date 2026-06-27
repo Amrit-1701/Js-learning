@@ -14,7 +14,7 @@
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="river"></li>
             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="owl" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="prayer"></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google" target="_main">Google</a></li>
         </ul>
 </body>
 </html>
@@ -43,19 +43,22 @@
     //     // e.stopPropagation() //stop bubbling or it did not allow to print the image print codde (up) one
     // }, false)
     
-    document.getElementById('google').addEventListener('click',function(e){
-        e.preventDefault();
-        e.stopPropagation()
-        console.log("google clicked");
-    }, false)
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
 
-   //if we click img the all img will remove from display
+  
+    //if we click img the all img will remove from display
  document.querySelector('#images').addEventListener("click",function(e){
-    console.log(`clicked the img ${e.target.alt}`)
-    let removeImg=e.target.parentNode
-    //removeImg.remove()
-    //removeImg.style.display="none"
-    removeImg.parentNode.removeChild(removeImg)
+    console.log(`clicked the img ${e.target.alt} tagnmame: ${e.target.tagName}`)
+    if(e.target.tagName=="IMG"){
+        let removeImg=e.target.parentNode  //if we click the dot or the ul as it preset in li so all img dlt 
+        //removeImg.remove()
+        //removeImg.style.display="none" 
+        //removeImg.parentNode.removeChild(removeImg)
+    }
  },false)   
 
 </script>
