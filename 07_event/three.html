@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASYNC</title>
 </head>
-<body>
+<body style="background-color: black;color:white">
     <h1>Chai or JS</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
@@ -18,12 +18,14 @@
        console.log('Amrit',Date.now())
     }
 
-   const intervalId=setInterval(sayDate,1000,'hi')
+   let intervalId
 
 //    clearInterval(intervalId)
 
     document.querySelector("#start").addEventListener("click",function(){
         intervalId=setInterval(sayDate,1000,'hi')
-    })
+    },false)
 
-    document.querySelector("#stop").addEventListener("click",()=>{clearInterval(intervalId)})
+    document.querySelector("#stop").addEventListener("click",
+    function(){clearInterval(intervalId)},false)
+    </script>
