@@ -38,16 +38,58 @@ const promiseThree = new Promise(function (resolve, reject) {
 // })
 
 
-const promiseFour = new Promise(function(resolve,reject){
-    setTimeout(()=>{
+const promiseFour = new Promise(function (resolve, reject) {
+    setTimeout(() => {
         let error = true;
-        if(!error){
-            resolve({username:'amrit', email:'jsfe@gmail.com'})
-        }else{
+        if (!error) {
+            resolve({ username: 'amrit', email: 'jsfe@gmail.com' })
+        } else {
             reject('error: something went wrong')
         }
-    },1000)
+    }, 1000)
 })
 
-promiseFour.then(function())
+promiseFour
+    .then((user) => {
+        console.log(user)
+        return user.username  //Because whatever you return from one .then()
+        //becomes the input of the next .then().
+    })
+    .then((username) => {
+        console.log(username)
+    })
+    .catch((error) => {
+        //console.log(error)
+    }).finally(() => {
+        //console.log('promise is either resolved or rejected') 
+    })
 
+
+//Why do we chain .then()?
+// Because each .then() can process the result from the previous step and pass a new value to the next step. 
+// This allows us to perform multiple asynchronous operations(which take time and the sys do no wait for it) in sequence without nested callbacks.
+
+
+//+++++++ async & await ++++++++
+const promiseFive = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let error = true;
+        if (!error) {
+            resolve({ username: 'amrit', email: 'jsfe@gmail.com' })
+        } else {
+            reject('error: Js went wrong')
+        }
+    }, 1000)
+})
+
+
+async function consumePromiseFive() {
+    try {
+        const response = await promiseFive
+        console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
+} //promiseFive is a Object so we do not consume it like a function (promiseFive())
+
+consumePromiseFive()
