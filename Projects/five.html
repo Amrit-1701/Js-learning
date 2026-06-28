@@ -30,18 +30,38 @@
     </style>
   </head>
   <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
-        >Youtube channel</a
-      >
-    </nav>
+
     <div class="project">
       <div id="insert">
         <div class="key">Press the key and watch magic</div>
       </div>
     </div>
 
-    <script src="./chaiaurcode.js"></script>
   </body>
 </html>
+
+<script>
+    const insert=document.getElementById("insert")
+
+    window.addEventListener("keydown",(e)=>{
+        insert.innerHTML=`
+        <div class="key">
+            <table>
+                <tr>
+                    <th>Key</th>
+                    <th>KeyCode</th>
+                    <th>Code</th>
+                </tr>
+                <tr>
+                    <td>${e.key===" " ? "space"  : e.key}</td>
+                    <td>${e.keyCode}</td>
+                    <td>${e.code}</td>
+                </tr>
+            </table>
+        </div>
+        `
+    })
+
+
+
+</script>
