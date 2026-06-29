@@ -25,7 +25,7 @@ Array.prototype.myName=function(){
 //myHero.myName()
     //heroPow.myName() // this show error as we cannt access by object if it extend through array
 
-    
+
 // +++++++++ Inheritence ++++++++++++
 
 const user={
@@ -65,4 +65,6 @@ String.prototype.trueLength = function(){
 // anotherUsername.trueLength()
 // "amrit".trueLength()
 // "jai ho ".trueLength()
+
+
 
