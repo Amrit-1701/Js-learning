@@ -37,3 +37,6 @@ console.log(userTwo.constructor)
 
 //when u use new keyword it will create a empty object call as instance
 //constructor func call by new keyword
+
+//console.log(userOne instanceof User)
+//console.log(userOne instanceof Object) // true because all the objects are instance of object
