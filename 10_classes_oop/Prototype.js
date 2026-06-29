@@ -22,5 +22,47 @@ Array.prototype.myName=function(){
 
 //heroPow.amrit()
 // myHero.amrit()
-myHero.myName()
-heroPow.myName() // this show error as we cannt access by object if it extend through array
+//myHero.myName()
+    //heroPow.myName() // this show error as we cannt access by object if it extend through array
+
+    
+// +++++++++ Inheritence ++++++++++++
+
+const user={
+    name:'amrit',
+    pass:"jnff65"
+}
+
+const Teacher ={
+    makeVd: true
+} 
+
+const teachingSupport = {
+    isAvailable:false
+}
+
+const TASupport={
+    makeAssign:"JS Assignment",
+    fullTime:true,
+    __proto__:teachingSupport
+}
+
+Teacher.__proto__=user
+
+//console.log(TASupport.isAvailable)
+
+//modern Syntax
+Object.setPrototypeOf(teachingSupport,Teacher)
+
+let anotherUsername= "Joanathan  "
+
+
+String.prototype.trueLength = function(){
+    console.log(`${this}`)
+    console.log(`True length is ${this.trim().length}`)
+}
+
+// anotherUsername.trueLength()
+// "amrit".trueLength()
+// "jai ho ".trueLength()
+
