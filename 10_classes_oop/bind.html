@@ -19,11 +19,13 @@
              //requirements: button click reference and the function attach to it 
              document
                 .querySelector("button")
-                .addEventListener('click',this.handleClick)
+                .addEventListener('click',this.handleClick.bind(this))
         }
         handleClick(){
             console.log('btn clicked')
+            console.log(this);
             console.log(this.server) //now this show undefined
+           //so we use bind() functionn bind all the this keyword in upper addevent line
         }
 
     }
