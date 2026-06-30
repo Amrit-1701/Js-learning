@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#212121; color:#fff">
+    <button>click me</button>
+</body>
+</html>
+
+<script>
+    class React{
+        constructor(){
+            this.library='react'
+            this.server="https://localhost:300"
+
+             //requirements: button click reference and the function attach to it 
+             document
+                .querySelector("button")
+                .addEventListener('click',this.handleClick)
+        }
+        handleClick(){
+            console.log('btn clicked')
+            console.log(this.server) //now this show undefined
+        }
+
+    }
+    const user=new React()
+</script>

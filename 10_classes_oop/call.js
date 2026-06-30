@@ -8,7 +8,7 @@ function setUsername(username){
 
 function createUser(username,pass,email){
     setUsername.call(this,username)
-    //we use . call to hold the reference in setUsername func and this parameter so it uses the this of this func and store data  
+    //we use .call to hold the reference in setUsername func and this parameter so it uses the this of this func and store data  
     this.email=email
     this.pass=pass
 }
